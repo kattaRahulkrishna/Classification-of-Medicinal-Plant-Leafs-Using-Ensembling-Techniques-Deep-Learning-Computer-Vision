@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Medi</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/static/css/bootstrap.css" />
+
+  <!-- Fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet" />
+  <!-- Responsive style -->
+  <link href="/static/css/responsive.css" rel="stylesheet" />
+</head>
+
+
+<style>
+  .large-form {
+    max-width: 800px; /* Adjust the max-width as needed */
+    padding: 2rem; /* Add some padding around the form */
+    margin: auto; /* Center the form horizontally */
+    background-color: #f8f9fa; /* Optional: Add a background color */
+    border-radius: 8px; /* Optional: Add rounded corners */
+  }
+
+  .contact-form-body {
+    padding: 1rem; /* Add padding to the form body */
+  }
+
+  .form-control {
+    font-size: 1.1rem; /* Increase the font size of the input */
+  }
+
+  .btn-primary {
+    font-size: 1.1rem; /* Increase the font size of the button */
+    padding: 0.75rem; /* Add some padding inside the button */
+  }
+
+  .btn-custom-green {
+      background-color: #00ff00;
+      border-color: #00ff00;
+      color: black; /* Optional: sets text color to ensure it's readable */
+    }
+</style>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- Header section starts -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+            <img src="/static/images/logo.png" alt="Medi Logo" />
+            <span>Medi</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('about2') }}">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('upload') }}">Prediction</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('index') }}">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End header section -->
+  </div>
+  <!-- End hero area -->
+
+  <section class="contact-section section-padding" id="section_6">
+    <div class="container text-center">
+      {% if mypath %}
+        <div>
+          <img style="margin-top: 50px;" src="/{{ mypath }}" height="100" width="150" alt="Prediction Result">
+          <h5 class="mt-3"><b>Result:</b> {{ prediction }}</h5>
+          {% if prediction != "This image is not relevant to this project!" %}
+            <h5 class="mt-3"><b>Description:</b> {{ description }}</h5>
+            <h5 class="mt-3"><b>Uses:</b> {{ uses }}</h5>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+    
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-12 mx-auto">
+          <nav class="d-flex justify-content-center">
+            <div class="nav nav-tabs align-items-baseline justify-content-center" id="nav-tab" role="tablist">
+              <button class="nav-link active" id="nav-ContactForm-tab" data-bs-toggle="tab" data-bs-target="#nav-ContactForm"
+                      type="button" role="tab" aria-controls="nav-ContactForm" aria-selected="false"
+                      style="margin-top: 20px;">
+                      <h5>Upload File</h5>
+              </button>
+
+            </div>
+          </nav>
+
+          <div class="tab-content shadow-lg mt-5" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-ContactForm" role="tabpanel" aria-labelledby="nav-ContactForm-tab">
+              <form class="custom-form contact-form mb-5 large-form" action="{{ url_for('upload') }}" method="post" role="form" enctype="multipart/form-data">
+                <div class="contact-form-body">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-10 col-12 mx-auto">
+                      <input type="file" name="file" accept="image/*" class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-8 col-12 mx-auto mt-4">
+                    <button type="submit" class="btn btn-custom-green w-100">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/static/js/jquery-3.4.1.min.js"></script>
+  <script src="/static/js/bootstrap.js"></script>
+</body>
+
+</html>
