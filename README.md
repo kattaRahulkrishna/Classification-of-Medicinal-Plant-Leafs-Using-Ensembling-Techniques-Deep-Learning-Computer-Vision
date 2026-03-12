@@ -81,43 +81,6 @@ The system trains and evaluates three models to classify 40 distinct medicinal p
 
 ---
 
-## 🚀 Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/medi-plant-identification.git
-   cd medi-plant-identification
-   ```
-
-2. **Create a virtual environment**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate      # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Configure the database**
-   - Start XAMPP and launch MySQL
-   - Create the database schema:
-     ```bash
-     mysql -u root -p < database/schema.sql
-     ```
-   - Update DB credentials in `config.py`
-
-5. **Run the application**
-   ```bash
-   python app.py
-   ```
-
-6. **Access the app**
-   Open your browser and navigate to `http://localhost:5000`
-
----
-
 ## 📖 Usage
 
 1. **Register** a new account on the Registration page
@@ -217,19 +180,3 @@ All 7 model-building test cases passed successfully, covering dataset loading, i
 - Wu, Z., et al. (2022). *Survey on Deep Learning for Plant Disease Diagnosis.* Computers and Electronics in Agriculture.
 - Tan, M., & Le, Q. V. (2021). *EfficientNetV2.* CVPR.
 - Liu, Z., et al. (2023). *Swin Transformer V2.* CVPR.
-
----
-
-## 📄 License
-
-This project is developed for academic and research purposes.
-
----
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a pull request.
-
----
-
-> Built with ❤️ to bridge traditional botanical knowledge with modern deep learning.
