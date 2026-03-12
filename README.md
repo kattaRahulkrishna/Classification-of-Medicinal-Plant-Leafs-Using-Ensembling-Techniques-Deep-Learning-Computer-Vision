@@ -4,24 +4,6 @@ An intelligent web application that automatically identifies **40 medicinal plan
 
 ---
 
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Demo](#demo)
-- [Features](#features)
-- [Models & Results](#models--results)
-- [Tech Stack](#tech-stack)
-- [System Requirements](#system-requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Dataset](#dataset)
-- [Testing](#testing)
-- [Future Enhancements](#future-enhancements)
-- [References](#references)
-
----
-
 ## 🔍 Overview
 
 Traditional medicinal plant identification relies heavily on botanical expertise and is time-consuming, impractical for large-scale use, and inaccessible in remote or field environments. **MEDI** solves this by automating the identification process using state-of-the-art deep learning techniques.
