@@ -2,6 +2,29 @@
 
 An intelligent web application that automatically identifies **40 medicinal plant species** from images using Convolutional Neural Networks (CNN), MobileNet, and a hybrid MobileNet+RNN model.
 
+> 🎓 Academic Final Year Project — B.Tech Computer Science, Amrita Vishwa Vidyapeetham (2025)
+> 👤 **Katta Rahul Krishna**
+
+---
+
+## 📋 Table of Contents
+
+- [Overview](#overview)
+- [Demo](#demo)
+- [Features](#features)
+- [Models & Results](#models--results)
+- [Tech Stack](#tech-stack)
+- [System Requirements](#system-requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Dataset](#dataset)
+- [Testing](#testing)
+- [Future Enhancements](#future-enhancements)
+- [References](#references)
+- [Author](#author)
+- [License](#license)
+
 ---
 
 ## 🔍 Overview
@@ -78,6 +101,43 @@ The system trains and evaluates three models to classify 40 distinct medicinal p
 - MySQL
 - XAMPP Server
 - VS Code (recommended)
+
+---
+
+## 🚀 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/kattaRahulkrishna/medi-plant-identification.git
+   cd medi-plant-identification
+   ```
+
+2. **Create a virtual environment**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate      # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Configure the database**
+   - Start XAMPP and launch MySQL
+   - Create the database schema:
+     ```bash
+     mysql -u root -p < database/schema.sql
+     ```
+   - Update DB credentials in `config.py`
+
+5. **Run the application**
+   ```bash
+   python app.py
+   ```
+
+6. **Access the app**
+   Open your browser and navigate to `http://localhost:5000`
 
 ---
 
@@ -180,3 +240,18 @@ All 7 model-building test cases passed successfully, covering dataset loading, i
 - Wu, Z., et al. (2022). *Survey on Deep Learning for Plant Disease Diagnosis.* Computers and Electronics in Agriculture.
 - Tan, M., & Le, Q. V. (2021). *EfficientNetV2.* CVPR.
 - Liu, Z., et al. (2023). *Swin Transformer V2.* CVPR.
+
+---
+
+## 👨‍💻 Author
+
+**Katta Rahul Krishna**
+- 📧 kattarahulkrishna05853@gmail.com
+- 💻 [GitHub](https://github.com/kattaRahulkrishna)
+- 🔗 [LinkedIn](https://linkedin.com/in/katta-rahul-krishna)
+
+---
+
+## 📄 License
+
+This project was developed for academic purposes (final year project) as part of the B.Tech Computer Science curriculum at **Amrita Vishwa Vidyapeetham, Coimbatore**.
