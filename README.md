@@ -247,9 +247,6 @@ All 7 model-building test cases passed successfully, covering dataset loading, i
 
 **Katta Rahul Krishna**
 - 📧 kattarahulkrishna05853@gmail.com
-- 💻 [GitHub](https://github.com/kattaRahulkrishna)
-- 🔗 [LinkedIn](https://linkedin.com/in/katta-rahul-krishna)
-
 ---
 
 ## 📄 License
